@@ -3,7 +3,7 @@
 	ini_set('display_errors', 'On');
     error_reporting(E_ALL);
 	date_default_timezone_set('America/Los_Angeles');
-    require('constants.php');
+    require('/includes/constants.php');
 
 	// open connection to sql database via PDO
 	try {
