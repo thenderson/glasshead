@@ -1,8 +1,8 @@
 <?php
     // configuration
 	ini_set('display_errors', 'On');
-    error_reporting(E_ALL);
-	date_default_timezone_set('America/Los_Angeles');
+    //error_reporting(E_ALL);
+	//date_default_timezone_set('America/Los_Angeles');
     require('./includes/constants.php');
 
 	// open connection to sql database via PDO
@@ -17,7 +17,10 @@
 		trigger_error($e->getMessage(), E_USER_ERROR);
 		exit;
 	}
-
+	error_log("");
+	error_log("--------------------");
+	error_log(print_r($_POST, true));
+	
     // parse POST data
     if ($_SERVER["REQUEST_METHOD"] == "POST")
     {
