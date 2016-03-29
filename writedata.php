@@ -19,7 +19,9 @@
 	}
 	error_log("");
 	error_log("--------------------");
-	error_log(print_r($_POST, true));
+	error_log("post: " . print_r($_POST, true));
+	error_log("post: " . var_dump($_POST));
+	error_log("request: " . print_r($_REQUEST, true));
 	
     // parse POST data
     if ($_SERVER["REQUEST_METHOD"] == "POST")
